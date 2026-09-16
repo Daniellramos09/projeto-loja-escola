@@ -17,7 +17,7 @@ Cada produto da loja deve obedecer a pelo menos uma das regras abaixo:
 - começar com a letra Z;
 - ser de uso único.
 
-A loja deve possuir produtos variados. Ao criar o catálogo, distribuam as regras entre os produtos em vez de usar a mesma regra em todos eles.
+A loja deve possuir produtos variados. Ao criar o catálogo (de pelo menos 2 produtos), distribuam as regras entre os produtos em vez de usar a mesma regra em todos eles.
 
 Alguns exemplos para inspirar — não é necessário utilizá-los:
 

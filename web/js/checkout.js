@@ -1,4 +1,6 @@
+// 
 const form = document.querySelector("#checkoutForm");
+//const form = document.getElementById("checkoutForm");
 const cepInput = document.querySelector("#cep");
 const buscarCepButton = document.querySelector("#buscarCep");
 const cepFeedback = document.querySelector("#cepFeedback");
@@ -17,29 +19,6 @@ function cepValido(cep) {
   return somenteNumeros(cep).length === 8;
 }
 
-cepInput?.addEventListener("input", () => {
-  cepInput.value = formatarCep(cepInput.value);
-});
-
-buscarCepButton?.addEventListener("click", () => {
-  if (!cepValido(cepInput.value)) {
-    cepFeedback.textContent = "Digite um CEP válido antes de buscar.";
-    cepInput.focus();
-    return;
-  }
-
-  /*
-    TODO PARA OS ALUNOS:
-    1. limpar o CEP;
-    2. fazer fetch para https://viacep.com.br/ws/CEP/json/;
-    3. converter a resposta para JSON;
-    4. tratar CEP inexistente e erros de rede;
-    5. preencher logradouro, bairro, cidade e UF;
-    6. informar carregamento, sucesso ou erro em cepFeedback.
-  */
-
-  cepFeedback.textContent = "CEP válido. A consulta à ViaCEP ainda precisa ser implementada.";
-});
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
