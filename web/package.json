@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Olá! Neste projeto, você e seu grupo receberam a base de uma pequena loja virtual. Ela já possui uma vitrine, uma página de produto, um checkout e uma página de confirmação, mas ainda está incompleta e precisa ganhar uma identidade totalmente nova.",
+  "main": "index.js",
+  "scripts": {
+  "dev": "vite"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "vite": "^8.3.4"
+  }
+}
