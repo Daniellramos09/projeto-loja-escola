@@ -36,3 +36,55 @@ form?.addEventListener("submit", (event) => {
   sessionStorage.setItem("pedidoNumero", `PED-${Math.floor(100000 + Math.random() * 900000)}`);
   window.location.href = "sucesso.html";
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const inputCep = document.getElementById('cep');
+  const inputEndereco = document.getElementById('logradouro');
+  const inputBairro = document.getElementById('bairro');
+  const inputCidade = document.getElementById('cidade');
+  const inputUf = document.getElementById('estado');
+  const inputNumero = document.getElementById('numero');
+
+
+  const buscarCep = async () => {
+
+    const cepLimpo = inputCep.value.replace(/\D/g, '');
+
+
+    if (cepLimpo.length === 8) {
+      try {
+
+        const resposta = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
+        const dados = await resposta.json();
+
+
+        if (dados.erro) {
+          alert("CEP não encontrado.");
+          return;
+        }
+
+
+        inputEndereco.value = dados.logradouro;
+        inputBairro.value = dados.bairro;
+        inputCidade.value = dados.localidade;
+        inputUf.value = dados.uf;
+
+
+        inputNumero.focus();
+
+      } catch (erro) {
+        console.error("Erro ao buscar o CEP:", erro);
+        alert("Erro ao conectar com o servidor de CEP.");
+      }
+    }
+  };
+
+
+  inputCep.addEventListener('blur', buscarCep);
+
+
+});

@@ -39,3 +39,48 @@ body { color: var(--ink); background: #fff; }
    - revisar telas muito pequenas;
    - avaliar prefers-reduced-motion antes de adicionar animações.
 */
+
+.eyebrow {
+    background-color: #ff6600; 
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.product-card .card-img-top {
+    height: 250px;
+    object-fit: contain; 
+    width: 100%;
+    padding: 1rem;      
+    background-color: #ffffff;
+}
+
+
+.btn-laranja {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-laranja:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+    color: #ffffff;
+}
+
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
